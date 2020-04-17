@@ -1,0 +1,22 @@
+.listImg {
+  height: 120px;
+  pointer-events: none;
+}
+
+.listItem {
+  font-size: 20px;
+  font-weight: 600;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 5px;
+  border-radius: 35%;
+  border: rgba(248, 192, 236, 0.801) 2px solid;
+  width: 60%;
+  transition: all 0.5s;
+}
+.listItem:hover {
+  cursor: pointer;
+  transform: scale(1.4);
+}

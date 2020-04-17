@@ -1,0 +1,11 @@
+header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.titleImage {
+  width: 20%;
+  height: auto;
+}

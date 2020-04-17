@@ -1,0 +1,54 @@
+PokeSuggest
+
+-SearchBar
+    SearchField
+    SearchButton
+
+-AutoComplete
+    OptionsList
+    Option
+
+-PokemonDisplay
+    PokemonImage
+    PokemonInfo
+
+---------------------------------------
+
+What to track(useState)
+-what is typed into the search field (searchTerm)
+-what is in the AutoComplete list options (listOptions)
+-what is selected from the autoCompleted(Result)
+
+How do these interact with our components
+
+-searchTerm 
+    needs to be seen by searchbar/SearchField
+    needs to be seen by AutoComplete/OptionsList
+    needs to be edited by the AutoComplete/Option
+        needs to be able to set searchTerm when selecting an option
+    needs to be edited by the SearchBar/SearchField
+        needs to be able to set the searchTerm when typing into the input
+searchTerm state needs to live in PokeSuggest
+
+-listOptions 
+    is dependant on searchTerm
+    needs to be edited by SearchField/SearchBar
+listOptions state needs to live in AutoComplete
+
+-result 
+    needs to be seen by PokemonDisplay()
+    needs to be edited by SearchBar/SearchButton
+    - when you click the button we need to be able to set result to be searchTerm
+result needs to live in PokeSuggest
+
+------------------
+
+Pokemon API
+API - options
+    - result
+searchTerm dictates
+
+fetch - when searchTerm changes - options(state)
+        - AutoComplete prop includes searchTerm, react to that prop changes and create a new fetch request. 
+        useEffect with a fetch request dependant on searchterm
+      - when we click button to grab result -result(state))

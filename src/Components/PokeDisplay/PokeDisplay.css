@@ -1,0 +1,68 @@
+.pokeContainer {
+  grid-area: display;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-areas: "pokeDisplay";
+  align-items: start;
+}
+
+.pokeDisplay {
+  grid-area: pokeDisplay;
+  margin: 30px;
+  border-radius: 25px;
+  border: rgb(240, 209, 199) solid 2px;
+  align-items: start;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas:
+    "pic name"
+    "pic id"
+    "pic types"
+    "pic desc";
+}
+
+@media (max-width: 700px) {
+  .pokeDisplay {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:
+      "pic "
+      "name"
+      " id"
+      " types"
+      " desc";
+  }
+}
+.pokeName {
+  grid-area: name;
+  margin: 0px;
+  font-size: 60px;
+}
+.pokeId {
+  grid-area: id;
+  margin: 0px;
+  font-size: 40px;
+}
+
+.pokeDescription {
+  grid-area: desc;
+  margin: 0px;
+  font-size: 20px;
+}
+
+.pokeEvolution {
+  display: none;
+  font-size: 30px;
+  margin: 0px;
+}
+
+.pokeType {
+  grid-area: types;
+  margin: 0px;
+  font-size: 30px;
+}
+.pokeImg {
+  grid-area: pic;
+}

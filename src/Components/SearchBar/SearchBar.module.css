@@ -1,0 +1,10 @@
+h3 {
+  font-size: 40px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.searchForm {
+  grid-area: searchForm;
+}
